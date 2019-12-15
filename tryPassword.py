@@ -1,6 +1,6 @@
 password = 'a123456'
 count = 3
-while True:
+while count > 0:
 	user_password = input('請輸入密碼:')
 	if (password == user_password):
 		print('登入成功')
@@ -10,5 +10,4 @@ while True:
 		print('密碼錯誤')
 		if(count != 0):
 			print('你還有', count, '次機會' )
-	if(count == 0):
-		break
+	
