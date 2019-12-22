@@ -4,7 +4,7 @@ with open('tallyBook.csv', 'r') as f:
 	for line in f:
 		if '商品, 價錢' in line:
 			continue
-		product, price = (line.strip().split(','))
+		product, price = line.strip().split(',') 
 		products.append([product, price])
 print(products)
 
@@ -25,4 +25,4 @@ for product in products:
 with open('tallyBook.csv', 'w') as f:
 	f.write('商品, 價錢\n')
 	for product in products:
-		f.write(product[0] + ',' + str(product[1]))
+		f.write(product[0] + ',' + str(product[1]) + '\n')
