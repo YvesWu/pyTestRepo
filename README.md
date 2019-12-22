@@ -5,3 +5,4 @@
 * 2019/12/15 change "try password" (while i > 0)
 * 2019/12/15 add "guessNumber" 
 * 2019/12/16 add "reviews_analyzer"
+* 2019/12/22 add "tally_book"
