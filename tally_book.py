@@ -1,12 +1,20 @@
-# 讀取檔案
+#檢查檔案
+import os #operating system
 products = []
-with open('tallyBook.csv', 'r') as f:
-	for line in f:
-		if '商品, 價錢' in line:
-			continue
-		product, price = line.strip().split(',') 
-		products.append([product, price])
-print(products)
+if os.path.isfile('tallyBook.csv'):
+	print('檔案存在')
+	# 讀取檔案
+	with open('tallyBook.csv', 'r') as f:
+		for line in f:
+			if '商品, 價錢' in line:
+				continue
+			product, price = line.strip().split(',') #spilt(',') 字串依逗號分隔成清單
+			products.append([product, price])
+	print(products)
+else:
+	print('檔案不存在')
+
+
 
 # 使用者輸入
 while True:
